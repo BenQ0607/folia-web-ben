@@ -1,6 +1,14 @@
+
 {
   "ignoreCommand": "git rev-parse --verify -q HEAD^ >/dev/null && git diff --quiet HEAD^ HEAD -- . ':(exclude)docs/CODEMAP.md'",
   "rewrites": [
-    { "source": "/api/qq/:path*", "destination": "/api/qq?path=/:path*" }
+    {
+      "source": "/api/qq/:path*",
+      "destination": "/api/qq?path=/:path*"
+    },
+    {
+      "source": "/netease/:path*",
+      "destination": "https://api-enhanced-xi-taupe.vercel.app/:path*"
+    }
   ]
 }
