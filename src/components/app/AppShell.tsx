@@ -159,10 +159,6 @@ const AppShell: React.FC<AppShellProps> = ({
             
 style={{
     ...appStyle,
-    transform: !isElectronWindow && window.matchMedia('(display-mode: standalone)').matches
-        ? 'scale(1.02)'
-        : undefined,
-    transformOrigin: 'center 45%',
     borderRadius: shouldApplyWindowRadius ? resolveWindowCornerRadius(window.electron?.platform ?? '') : undefined,
     boxShadow: showTransparentWindowBorder ? 'inset 0 0 0 1px rgba(255,255,255,0.24)' : undefined,
 }}
