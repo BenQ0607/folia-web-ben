@@ -447,3 +447,20 @@ html[data-click-through='active'] body .click-through-interactive * {
     opacity: 0.9;
 }
 
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  @media (display-mode: standalone) {
+    html::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: env(safe-area-inset-bottom);
+      background: #242424;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}
+  
