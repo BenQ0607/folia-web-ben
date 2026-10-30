@@ -40,18 +40,7 @@ body {
   overflow: hidden;
 }
 /* iPad home-screen PWA viewport test */
-@supports (height: 100dvh) {
-  @media (display-mode: standalone) {
-    html,
-    body,
-    #root {
-      width: 100%;
-      height: 100%;
-      min-height: 100dvh;
-      margin: 0;
-    }
-  }
-}
+
 
 /* 播放页空闲时隐藏鼠标指针。挂点在播放页的视觉层容器上，弹窗和浮动控件都在它外面，
    不会被波及，所以不需要 !important。
