@@ -34,7 +34,7 @@
 
 /* Custom Global Styles */
 body {
-  background-color: red;
+  background-color: #09090b;
   color: #e4e4e7;
   font-family: 'Inter', var(--font-cjk-sans), sans-serif;
   overflow: hidden;
@@ -446,6 +446,4 @@ html[data-click-through='active'] body .click-through-interactive * {
     animation: none;
     opacity: 0.9;
 }
-html {
-  background-color: red;
-}
+
