@@ -156,11 +156,17 @@ const AppShell: React.FC<AppShellProps> = ({
         <div
             ref={layoutRootRef}
             className="fixed inset-0 w-full h-full flex flex-col overflow-hidden font-sans transition-colors duration-500"
-            style={{
-                ...appStyle,
-                borderRadius: shouldApplyWindowRadius ? resolveWindowCornerRadius(window.electron?.platform ?? '') : undefined,
-                boxShadow: showTransparentWindowBorder ? 'inset 0 0 0 1px rgba(255,255,255,0.24)' : undefined,
-            }}
+            
+style={{
+    ...appStyle,
+    transform: !isElectronWindow && window.matchMedia('(display-mode: standalone)').matches
+        ? 'scale(1.02)'
+        : undefined,
+    transformOrigin: 'center 45%',
+    borderRadius: shouldApplyWindowRadius ? resolveWindowCornerRadius(window.electron?.platform ?? '') : undefined,
+    boxShadow: showTransparentWindowBorder ? 'inset 0 0 0 1px rgba(255,255,255,0.24)' : undefined,
+}}
+
         >
             {usesCustomWindowChrome && (
                 <div className="absolute top-0 left-0 right-0 z-[9999] h-8 pointer-events-none">
