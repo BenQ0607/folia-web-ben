@@ -155,7 +155,7 @@ const AppShell: React.FC<AppShellProps> = ({
     return (
         <div
             ref={layoutRootRef}
-            className="fixed inset-0 w-full h-full flex flex-col overflow-hidden font-sans transition-colors duration-500"
+            className="fixed inset-0 w-full h-[100dvh] flex flex-col overflow-hidden font-sans transition-colors duration-500"
             style={{
                 ...appStyle,
                 borderRadius: shouldApplyWindowRadius ? resolveWindowCornerRadius(window.electron?.platform ?? '') : undefined,
