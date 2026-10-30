@@ -34,7 +34,7 @@
 
 /* Custom Global Styles */
 body {
-  background-color: #09090b;
+  background-color: red;
   color: #e4e4e7;
   font-family: 'Inter', var(--font-cjk-sans), sans-serif;
   overflow: hidden;
@@ -445,4 +445,7 @@ html[data-click-through='active'] body .click-through-interactive * {
 :root[data-reduce-motion~='uiMicroMotion'] .locate-seeking {
     animation: none;
     opacity: 0.9;
+}
+html {
+  background-color: red;
 }
